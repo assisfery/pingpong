@@ -14,18 +14,7 @@ window.onload = function()
     canvas.addEventListener("mousedown", onMouseDown);
     canvas.addEventListener("mouseup", onMouseUp);
     canvas.addEventListener("mouseout", onMouseOut);
+    window.addEventListener('keydown', onKeyDown, false);
 
 	update();
-}
-
-
-
-function draw()
-{
-	context.clearRect(0, 0, canvas.width, canvas.height);
-
-	if(menu == "start")
-	{
-		drawText("PingPong", textCenter("PingPong"), 40);
-	}
 }
