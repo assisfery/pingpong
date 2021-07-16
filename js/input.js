@@ -6,6 +6,8 @@ function onMouseDown(e)
 
 	if(menu == "start")
 	{
+		b = new Ball("red", 10);
+
 		menu = "game";
 	}
 }

@@ -4,7 +4,7 @@ function update()
 
 	if(menu == "game")
 	{
-		
+		b.update();
 	}
 
 	draw();

@@ -6,4 +6,10 @@ function draw()
 	{
 		drawText("PingPong", textCenter("PingPong"), 40);
 	}
+
+	if(menu == "game")
+	{
+		b.draw();
+	}
+
 }

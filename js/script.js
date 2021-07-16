@@ -1,6 +1,5 @@
 var canvas;
 var context;
-
 var menu = "start";
 
 window.onload = function()
