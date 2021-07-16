@@ -4,7 +4,7 @@ var menu = "start";
 
 window.onload = function()
 {
-	console.log("starting...");
+	//console.log("starting...");
 
 	canvas = document.querySelector("#screen");
 	context = canvas.getContext("2d");

@@ -1,2 +1,2 @@
 # pingpong
-simple ping pong game just to relax
+simple ping pong game just to relax and review concepts
