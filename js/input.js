@@ -6,7 +6,8 @@ function onMouseDown(e)
 
 	if(menu == "start")
 	{
-		b = new Ball("red", 10);
+		b = new Ball("red");
+		p1 = new Player("blue");
 
 		menu = "game";
 	}
@@ -25,5 +26,14 @@ function getMousePos(e) {
 
 function onKeyDown(e)
 {
-	console.log(e.keyCode);
+	//console.log(e.keyCode);
+
+	if(menu == "game")
+	{
+		if(e.keyCode == 38)
+			p1.vy = -1 * Math.abs(p1.vy);
+
+		if(e.keyCode == 40)
+			p1.vy = Math.abs(p1.vy);
+	}
 }

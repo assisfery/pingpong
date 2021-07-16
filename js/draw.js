@@ -9,6 +9,7 @@ function draw()
 
 	if(menu == "game")
 	{
+		p1.draw();
 		b.draw();
 	}
 

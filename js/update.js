@@ -4,6 +4,7 @@ function update()
 
 	if(menu == "game")
 	{
+		p1.update();
 		b.update();
 	}
 
