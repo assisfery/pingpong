@@ -8,10 +8,19 @@ function onMouseDown(e)
 	{
 		ball = new Ball("red");
 		player1 = new Player("blue");
+		player2 = new Player("green");
+		player2.x = 40;
 
 		if(buttonStartVsComputer.isClicked(getMousePos(e)))
 		{
 			menu = "game";
+			mode = "vscomputer";
+		}
+
+		if(buttonStartVsPlayer.isClicked(getMousePos(e)))
+		{
+			menu = "game";
+			mode = "vsplayer";
 		}
 	}
 
@@ -42,9 +51,18 @@ function onKeyDown(e)
 	if(menu == "game")
 	{
 		if(e.keyCode == 38)
-			player1.vy = -1 * Math.abs(player1.vy);
+			player1.goUp();
 
 		if(e.keyCode == 40)
-			player1.vy = Math.abs(player1.vy);
+			player1.goDown();
+
+		if(mode == "vsplayer")
+		{
+			if(e.keyCode == 87)
+				player2.goUp();
+
+			if(e.keyCode == 83)
+				player2.goDown();
+		}
 	}
 }

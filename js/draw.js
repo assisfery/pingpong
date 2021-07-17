@@ -6,13 +6,20 @@ function draw()
 	{
 		drawText("PingPong", textCenter("PingPong", 32), 40);
 		buttonStartVsComputer.draw();
+		buttonStartVsPlayer.draw();
 	}
 
 	if(menu == "game")
 	{
 		player1.draw();
+		player2.draw();
 		ball.draw();
 		buttonBackToMenu.draw();
+
+		drawText("press up or down", canvas.width - 100, canvas.height - 20, '10px');
+
+		if(mode == "vsplayer")
+			drawText("press w or s", 20, canvas.height - 20, '10px');
 	}
 
 }

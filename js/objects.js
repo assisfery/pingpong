@@ -67,7 +67,17 @@ class Player
 	draw()
 	{
 		context.fillStyle = this.color;
-		context.fillRect(this.x, this.y, this.width, this.height)
+		context.fillRect(this.x, this.y, this.width, this.height);
+	}
+
+	goUp()
+	{
+		this.vy = -1 * Math.abs(this.vy);
+	}
+
+	goDown()
+	{
+		this.vy = Math.abs(this.vy);
 	}
 
 	update()
@@ -119,7 +129,10 @@ class Button
 }
 
 var ball; // ball object
-var player1; // player 1
+var player1;
+var player2;
 
 var buttonStartVsComputer;
+var buttonStartVsPlayer;
+
 var buttonBackToMenu;
