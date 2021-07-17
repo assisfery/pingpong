@@ -4,9 +4,14 @@ function update()
 
 	if(menu == "game")
 	{
-		player1.update();
-		player2.update();
 		ball.update();
+
+		player1.update();
+
+		if(mode == "vscomputer")
+			player2.compute(ball);
+
+		player2.update();		
 
 		if(detectCollision(ball.rect(), player1) || detectCollision(ball.rect(), player2))
 		{

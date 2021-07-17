@@ -88,6 +88,15 @@ class Player
 		if(this.y <= 0) this.y = 0;
 		if(this.y + this.height >= canvas.height) this.y = canvas.height - this.height;
 	}
+
+	compute(b) // decide where to go from the ball position
+	{
+		if(b.y < this.y)
+			this.goUp();
+
+		if(b.y > this.y + this.height)
+			this.goDown();
+	}
 }
 
 class Button
