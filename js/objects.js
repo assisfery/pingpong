@@ -80,5 +80,46 @@ class Player
 	}
 }
 
-var b; // ball object
-var p1; // player 1
+class Button
+{
+	constructor(txt, width, height, x = null, y = null)
+	{
+		this.txt = txt;
+		this.height = height;
+		this.width = width;
+
+		this.x = x ? x : (canvas.width - this.width) / 2; // center of screen in x axis
+		this.y = y ? y : (canvas.height - this.height) / 2; // center of screen in y axis
+	}
+
+	draw()
+	{
+		context.beginPath();
+		context.rect(this.x, this.y, this.width, this.height);
+		context.fillStyle = '#000';
+		context.fill();
+		context.lineWidth = 1;
+		context.strokeStyle = '#fff';
+		context.stroke();
+
+		drawText(this.txt, this.x + (this.width / 4), this.y + (this.height / 2), '16px');
+	}
+
+	isClicked(p)
+	{
+		if(
+			p.x >= this.x && p.x <= this.x + this.width
+			&&
+			p.y >= this.y && p.y <= this.y + this.height
+			)
+			return true;
+
+		return false;
+	}
+}
+
+var ball; // ball object
+var player1; // player 1
+
+var buttonStartVsComputer;
+var buttonBackToMenu;

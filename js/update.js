@@ -4,12 +4,12 @@ function update()
 
 	if(menu == "game")
 	{
-		p1.update();
-		b.update();
+		player1.update();
+		ball.update();
 
-		if(detectCollision(b.rect(), p1))
+		if(detectCollision(ball.rect(), player1))
 		{
-			b.vx *= -1; // change ball direction
+			ball.vx *= -1; // change ball direction
 		}
 	}
 

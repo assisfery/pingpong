@@ -4,13 +4,15 @@ function draw()
 
 	if(menu == "start")
 	{
-		drawText("PingPong", textCenter("PingPong"), 40);
+		drawText("PingPong", textCenter("PingPong", 32), 40);
+		buttonStartVsComputer.draw();
 	}
 
 	if(menu == "game")
 	{
-		p1.draw();
-		b.draw();
+		player1.draw();
+		ball.draw();
+		buttonBackToMenu.draw();
 	}
 
 }

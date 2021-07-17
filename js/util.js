@@ -5,10 +5,12 @@ function drawText(txt, x, y, size = '32px', font = 'Verdana', color = '#fff')
 	context.fillText(txt, x, y);
 }
 
-function textCenter(txt)
+function textCenter(txt, size)
 {
 	var textWidth = context.measureText(txt).width;
-	return (canvas.width/2) - (textWidth/2);
+
+	var scale = size / 16;
+	return (canvas.width/2) - (textWidth/2 * scale);
 }
 
 function detectCollision(rect1, rect2)
