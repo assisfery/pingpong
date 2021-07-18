@@ -13,10 +13,18 @@ function update()
 
 		player2.update();		
 
-		if(detectCollision(ball.rect(), player1) || detectCollision(ball.rect(), player2))
+		if(detectCollision(ball.rect(), player1))
 		{
 			ball.vx *= -1; // change ball direction
+			player1.points++;
 		}
+
+		if(detectCollision(ball.rect(), player2))
+		{
+			ball.vx *= -1; // change ball direction
+			player2.points++;
+		}
+
 	}
 
 	draw();

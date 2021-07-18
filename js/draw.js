@@ -20,6 +20,9 @@ function draw()
 
 		if(mode == "vsplayer")
 			drawText("press w or s", 20, canvas.height - 20, '10px');
+
+		drawText(player1.points, canvas.width - 20, canvas.height - 40, '10px');
+		drawText(player2.points, 20, canvas.height - 40, '10px');
 	}
 
 }

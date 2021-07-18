@@ -62,6 +62,8 @@ class Player
 
 		this.vx = 0;
 		this.vy = 4;
+
+		this.points = 0;
 	}
 
 	draw()
